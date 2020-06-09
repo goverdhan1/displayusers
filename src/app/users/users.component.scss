@@ -1,0 +1,42 @@
+.tbl {
+  font-family: "verdana";
+  font-size: .9rem;
+  border-collapse: collapse;
+  thead tr th {
+    text-transform: capitalize;
+    white-space: nowrap;
+    text-align: left;
+    padding: 5px 3px;
+    background: #cdcdcd;
+    color: #fff;
+    min-width: 100px;
+  }
+  .serial-num{
+    min-width: 20px !important;
+    }
+
+  tbody tr {
+    border-bottom: 1px solid #cdcdcd;
+  }
+  tbody tr td {
+    padding: 3px;
+    vertical-align: top;
+  }
+
+  .about {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 200px !important;
+    cursor: pointer;
+  }
+  .about:hover{
+      text-overflow: initial;
+      white-space: normal;
+  }
+
+  .phone {
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,90 @@
+<table class="tbl">
+  <thead>
+    <tr>
+      <th class="serial-num">
+        #
+      </th>
+      <th>
+        name
+      </th>
+      <th>
+        About
+      </th>
+      <th>
+        address
+      </th>
+      <th>
+        age
+      </th>
+      <th>
+        balance
+      </th>
+      <th>
+        company
+      </th>
+      <th>
+        email
+      </th>
+      <th>
+        eye Color
+      </th>
+      <th>
+        favorite Fruit
+      </th>
+      <th>
+        friends
+      </th>
+      <th>
+        gender
+      </th>
+      <th>
+        greeting
+      </th>
+      <th>
+        isActive
+      </th>
+      <th>
+        latitude
+      </th>
+      <th>
+        longitude
+      </th>
+      <th>
+        phone
+      </th>
+      <th>
+        picture
+      </th>
+      <th>
+        registered
+      </th>
+      <th>
+        tags
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let user of users[0]'>
+      <td>{{ user.index }}</td>
+      <td>{{ user.name }}</td>
+    <td><div class="about">{{ user.about }}</div></td>
+      <td>{{ user.address }}</td>
+      <td>{{ user.age }}</td>
+      <td>{{ user.balance }}</td>
+      <td>{{ user.company }}</td>
+      <td> <a href="mailto: {{ user.email }}"> {{ user.email }}</a></td>
+      <td>{{ user.eyeColor }}</td>
+      <td>{{ user.favoriteFruit }}</td>
+      <td><span *ngFor="let friend of user.friends">{{ friend.name }}, </span></td>
+      <td>{{ user.gender }}</td>
+      <td>{{ user.greeting }}</td>
+      <td>{{ user.isActive }}</td>
+      <td>{{ user.latitude }}</td>
+      <td>{{ user.longitude }}</td>
+      <td class="phone">{{ user.phone }}</td>
+      <td> <img src="{{ user.picture }}" /></td>
+      <td>{{ user.registered.split('T')[0] }}</td>
+      <td>{{ user.tags.join(', ') }}</td>
+    </tr>
+  </tbody>
+</table>
